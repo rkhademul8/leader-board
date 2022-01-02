@@ -138,3 +138,67 @@ hr{
 .fa-clock{
     color: #F596A3;
 }
+
+/* ------------
+Media Queries
+---------- */
+
+/* Mobile Device */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .section-title{
+        text-align: center;
+       
+    }
+    .players,.blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+    }
+   .thumbnail{
+       text-align: center;
+   }
+    .player, .blog{
+        flex-direction: column;
+    }
+    .courses{
+        width: 60%;
+        margin: auto;
+        grid-row-gap: 30px;
+    }
+   
+}
+
+/* tablet device */
+
+@media only screen and (min-width:688px) and (max-width:992px){
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .section-title{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .blogs{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .blog{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .courses {
+        width: 68%;
+        margin: auto;
+        grid-row-gap: 40px;
+    }
+}
